@@ -11,7 +11,7 @@ import UIKit
 extension UIApplication {
     
     static func image() -> UIImage? {
-        guard let keyWindow = UIApplication.shared.connectedScenes
+        guard let keyWindow = shared.connectedScenes
             .filter({$0.activationState == .foregroundActive})
             .map({$0 as? UIWindowScene})
             .compactMap({$0})
